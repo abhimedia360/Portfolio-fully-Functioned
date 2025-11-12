@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Abhi — Home</title>
+
+  <!-- Self‑contained styles moved to home.css -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+  <header class="header" role="banner">
+    <a class="brand" href="#" aria-label="Go to start">
+      <span class="brand-mark">AT</span>
+      <span>Abhishek Tiwari</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a class="ghost" href="PORTFOLIO.HTML" aria-label="Jump to portfolio">Portfolio</a>
+    </nav>
+  </header>
+
+  <main class="hero" id="home" aria-labelledby="hero-title">
+    <span class="kicker reveal">Full‑Stack Developer • Java • Web</span>
+    <h1 id="hero-title" class="headline reveal">I craft fast, beautiful web experiences.</h1>
+    <p class="sub reveal">Clean architectures, crisp UIs, and performance that feels instant. Explore selected projects, case studies, and how we can build together.</p>
+
+    <div class="cta reveal">
+      <!-- Primary CTA goes straight to your existing portfolio page -->
+      <a class="btn primary" href="PORTFOLIO.HTML" aria-label="View the portfolio page">View Portfolio <span class="arrow">→</span></a>
+      <a class="btn secondary" href="#about" aria-label="Scroll to about section">Learn more</a>
+    </div>
+
+    <!-- Decorative/brand visual: lightweight and responsive -->
+    <section class="canvas reveal" aria-hidden="true">
+      <div class="orb one"></div>
+      <div class="orb two"></div>
+      <div class="orb three"></div>
+    </section>
+  </main>
+
+  <section id="about" class="hero" aria-label="About" style="padding-top:32px;">
+    <h2 class="headline reveal" style="font-size: clamp(1.6rem, 4.5vw, 2.4rem);">What I do</h2>
+    <p class="sub reveal">I design and develop responsive websites and full‑stack apps. My focus areas: modern front‑end (HTML/CSS/JS), APIs, Java back‑ends, and delightful micro‑interactions that bring products to life.</p>
+    <div class="cta reveal">
+      <a class="btn primary" href="PORTFOLIO.HTML" aria-label="Go to portfolio from about">See Projects <span class="arrow">→</span></a>
+      <a class="btn secondary" href="#home" aria-label="Back to top">Back to top</a>
+    </div>
+  </section>
+
+  <footer role="contentinfo">© <span id="year"></span> Abhishek Tiwari — Built with love and clean code.</footer>
+
+  <!-- All behavior moved to home.js -->
+  <script src="home.js"></script>
+</body>
+</html>

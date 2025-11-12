@@ -1,0 +1,79 @@
+/* Contact page layout (kept simple and readable) */
+.contact-wrap {
+  padding-top: 110px;      /* clear the fixed header */
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 32px;
+  display: grid;
+  place-items: center;
+  min-height: 100dvh;
+}
+
+.contact-card {
+  width: min(920px, 96vw);
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 20px;
+  padding: 24px;
+}
+
+.contact-card h1 {
+  margin: 0 0 6px;
+  font-size: 2rem;
+}
+
+.contact-sub {
+  margin: 0 0 20px;
+  color: var(--color-muted);
+}
+
+form {
+  display: grid;
+  gap: 16px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+label {
+  font-weight: 600;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,.18);
+  background: rgba(255,255,255,.06);
+  color: var(--color-text);
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--color-muted);
+}
+
+.error {
+  color: #ffb3b3;
+  font-size: 0.9rem;
+  min-height: 1em;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-start;
+  margin-top: 8px;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .row { grid-template-columns: 1fr; }
+}

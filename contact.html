@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Me — Abhi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+  <header class="header" role="banner">
+    <a class="brand" href="index.html" aria-label="Go to Home">
+      <span class="brand-mark">AT</span>
+      <span>Abhishek Tiwari</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a class="ghost" href="index.html">Home</a>
+      <a class="ghost" href="PORTFOLIO.HTML">Portfolio</a>
+    </nav>
+  </header>
+
+  <main class="contact-wrap" aria-labelledby="contact-title">
+    <section class="contact-card reveal">
+      <h1 id="contact-title">Contact Me</h1>
+      <p class="contact-sub">Fill out the form and I’ll get back to you soon.</p>
+
+      <form id="contact-form" novalidate>
+        <!-- Row: Name -->
+        <div class="row">
+          <div class="field">
+            <label for="first_name">First Name</label>
+            <input id="first_name" name="first_name" type="text" required placeholder="Abhishek" autocomplete="given-name">
+            <small class="error"></small>
+          </div>
+          <div class="field">
+            <label for="last_name">Surname</label>
+            <input id="last_name" name="last_name" type="text" required placeholder="Tiwari" autocomplete="family-name">
+            <small class="error"></small>
+          </div>
+        </div>
+
+        <!-- Row: Email & Phone -->
+        <div class="row">
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="you@example.com" autocomplete="email">
+            <small class="error"></small>
+          </div>
+          <div class="field">
+            <label for="phone">Contact Number</label>
+            <input id="phone" name="phone" type="tel" required placeholder="+91 98765 43210" autocomplete="tel" pattern="^[0-9+\-()\s]{7,20}$" title="Enter a valid phone number">
+            <small class="error"></small>
+          </div>
+        </div>
+
+        <!-- Row: Company -->
+        <div class="row">
+          <div class="field">
+            <label for="company">Company Name</label>
+            <input id="company" name="company" type="text" placeholder="Your Company Pvt. Ltd.">
+            <small class="error"></small>
+          </div>
+          <div class="field">
+            <label for="address">Address</label>
+            <input id="address" name="address" type="text" placeholder="Street, City, State">
+            <small class="error"></small>
+          </div>
+        </div>
+
+        <!-- Message -->
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or question..."></textarea>
+          <small class="error"></small>
+        </div>
+
+        <div class="actions">
+          <button class="btn primary" type="submit">Submit</button>
+          <a class="btn secondary" href="index.html">Back to Home</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer role="contentinfo">© <span id="year"></span> Abhishek Tiwari</footer>
+
+  <script src="home.js"></script>
+  <script src="contact.js"></script>
+</body>
+</html>
