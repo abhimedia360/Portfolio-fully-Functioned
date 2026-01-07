@@ -8,7 +8,7 @@
 }
 
 body{
-background: #072031;
+
 color: rgb(101, 181, 252);
 
 }
@@ -50,12 +50,64 @@ transition: .3s;
 
 .home {
     height: 100vh;
-    background:url(homebackground.jpg) no-repeat;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 10%;
+    position: relative;
+}
+.animated-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1c1c1c);
+    background-size: 400% 400%;
+    animation: gradientmove 7s ease infinite;
+    z-index: -2;
+}
+@keyframes gradientmove{
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+.circle-bg{
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: linear-gradient(135deg,#ff512f,#dd2476);
     display: flex;
     align-items: center;
-padding: 0 10%;
+    justify-content: center;
+    position:absolute;
+     left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
 }
-
+.circle-bg::before{
+    content: "";
+    width: 90%;
+    height:90%;
+    border-radius: 50%;
+    background:url("portfolio.jpg") center/cover no-repeat;
+}
+.circle-bg{
+    animation: float 4s ease-in-out infinite;
+}
+@keyframes float {
+    0%, 100% {transform: translateY(-50%) translateY(0);}
+    50% {transform: translateY(-50%) translateY(-15px);}
+}
+@media (max-width: 768px){
+    .home{
+        justify-content: center;
+        padding: 0;
+    }
+    .circle-bg{
+        width: 220px;
+        height: 220px;
+        left: auto;
+    }
+}
 .home-content{
    
     max-width: 600px;
